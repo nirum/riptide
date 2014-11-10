@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    a(href='/') Home
+    h1 Results for #{metadata[0].name}
+    p #{metadata[0].desc}, created on: #{metadata[0].createdOn}
+    hr
+
+    p Select data to plot
+
+    select#dataidx
+        each hdr, idx in metadata[0].headers
+            option(value=idx)= hdr
+
+    //input#dataidx(value='0',placeholder='enter data index')
+    button#redraw(type='button').btn Redraw
+    p
+    div#container
+
+    div#name.metadata= metadata[0].name
+    div#headers.metadata
+        each hdr in metadata[0].headers
+            p= hdr
+
+    // Main App
+    script(type='text/javascript', src='/js/app.js')

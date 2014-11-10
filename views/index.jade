@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  hr
+
+  each expt in expts
+    div
+      h3
+        a(href="expts/#{expt.name}")= expt.name
+      p= expt.desc
+      p.small Created on: #{expt.createdOn}
+    hr

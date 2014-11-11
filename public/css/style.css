@@ -1,0 +1,48 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.metadata {
+  visibility: hidden;
+}
+
+#container {
+  border: 1px solid gray;
+}
+
+/* tell the SVG path to be a thin blue line without any area fill */
+path {
+  stroke: steelblue;
+  stroke-width: 3;
+  fill: none;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: lightgrey;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.y.label, .x.label {
+  font-size: 18px;
+}

@@ -8,12 +8,21 @@ block content
 
     p Select data to plot
 
-    select#dataidx
+    form#settings
+        p
+            span Radius:&nbsp;
+            input(type="text", id="radius", value=10)
+        p
+            span y-limits&nbsp;
+            input(type="text", id="ymin", value=0)
+            input(type="text", id="ymax", value=25)
         each hdr, idx in metadata[0].headers
-            option(value=idx)= hdr
+            p
+                input(type="checkbox", class="dataselect", name=hdr, value=idx)
+                span= hdr
 
-    //input#dataidx(value='0',placeholder='enter data index')
-    button#redraw(type='button').btn Redraw
+
+    button#update(type='button').btn Update
     p
     div#container
 

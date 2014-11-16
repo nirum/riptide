@@ -17,6 +17,8 @@
     "d3": "~3.4.13",
     "moment": "~2.8.3",
     "string": "~2.2.0",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "metrics-graphics": "*",
+    "bootstrap": "~3.3.1"
   }
 }

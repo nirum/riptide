@@ -10,20 +10,14 @@ block content
 
     form#settings
         p
-            span Radius:&nbsp;
-            input(type="text", id="radius", value=3)
-        p
             span Smooth&nbsp;
             input(type="checkbox", id="bezier", checked=true)
         each hdr, idx in metadata[0].headers
             p
-                input(type="checkbox", class="dataselect", name=hdr, value=idx)
+                input(type="radio", class="dataselect", name='foo', value=idx)
                 span= hdr
 
-
-    button#update(type='button').btn Update
-    p
-    canvas#container(width="1000", height="600")
+    div#container(width="1400", height="600")
 
     div#name.metadata= metadata[0].name
     div#headers.metadata
